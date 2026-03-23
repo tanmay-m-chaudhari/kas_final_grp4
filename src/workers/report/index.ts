@@ -23,7 +23,7 @@ const worker = new Worker(
     return { outputPath };
   },
   {
-    connection,
+    connection: connection as any,
     concurrency: 2,
   }
 );

@@ -23,7 +23,7 @@ const worker = new Worker(
     return result;
   },
   {
-    connection,
+    connection: connection as any,
     concurrency: 5,
     limiter: { max: 100, duration: 60000 },
   }
